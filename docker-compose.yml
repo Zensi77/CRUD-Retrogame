@@ -1,0 +1,10 @@
+services:
+  python:
+    tty: true
+    image: python:3.12
+    container_name: api_marketplace
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
