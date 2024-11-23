@@ -7,7 +7,7 @@ from app.conf.db import Base
 
 
 class Cart(BaseModel):
-    categoryId: Optional[int] = None
+    articuloId: Optional[int] = None
     userId: Optional[int] = None
     amount: Optional[int] = None
     
