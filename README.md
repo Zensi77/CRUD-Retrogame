@@ -19,12 +19,14 @@
 
 ## 🔗 Table of Contents
 
-- [📍 Caracteristicas](#-overview)
-- [📁 Estructura de proyecto](#-project-structure)
-- [🚀 Inicio rapido](#-getting-started)
-  - [☑️ Prerequisitos](#-prerequisites)
-  - [⚙️ Instalacion](#-installation)
-  - [🤖 Uso](#🤖-usage)
+- [📍 Caracteristicas](#-Caracteristicas)
+- [📁 Estructura de proyecto](#-Estructura-del-proyeco)
+- [🚀 Inicio rapido](#-Inicio-rapido)
+  - [☑️ Prerequisitos](#-Prerequisitos)
+  - [⚙️ Instalacion](#-Instalacion)
+  - [🤖 Uso](#🤖-Uso)
+    - [Documentación](#Documentación)
+    - [🔒 Roles](#-Roles)
 ---
 
 ## 📍 Caracteristicas
@@ -72,7 +74,7 @@ Before getting started with CRUD-Retrogame, ensure your runtime environment meet
 - **Container Runtime:** Docker
 
 
-### ⚙️ Installation
+### ⚙️ Instalacion
 
 Install CRUD-Retrogame using one of the following methods:
 
@@ -101,29 +103,21 @@ Install CRUD-Retrogame using one of the following methods:
 **Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ```sh
-❯ docker build -t Zensi77/CRUD-Retrogame .
+❯ docker compose up
 ```
 
-### 🤖 Usage
+### 🤖 Uso
 Replace the `.env.example` file with your own environment variables.
 
 Run CRUD-Retrogame using the following command:
 **Using `pip`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Pip-3776AB.svg?style={badge_style}&logo=pypi&logoColor=white" />](https://pypi.org/project/pip/)
 
 ```sh
-❯ python {entrypoint}
+❯ python main.py
 ```
 
 
-**Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
-
-```sh
-❯ docker run -it {image_name}
-```
-
----
-
-## Usuarios
+#### **Usuarios**
 La base de datos ya posee 2 administradores, los demas se crearan mediante un endpoint de la API.
 - admin1{
     username: admin, 
@@ -135,4 +129,21 @@ La base de datos ya posee 2 administradores, los demas se crearan mediante un en
     password: juanma, 
     role: admin
 }
+
+#### Documentación
+La documentación de la API se encuentra en la ruta `/docs` y `/redoc`.
+
+#### 🔒 Roles
+
+|  Accion |  Invitado | Registrado  | Admin  |
+|---|---|---|---|
+| Hacer Login  | Si  | No  | No  |
+| Registrarse  |  Si |  No | No  |
+|  Ver perfil |  No |  Si | Si  |
+| Cambiar contraseña  | No  | Si  | Si  |
+|  Ver videojuegos | Si  |  Si |  Si |
+| Ver categorias  | Si  |  SI | Si  |
+| Añadir categorias y juegos  | No  | No  | Si  |
+|  Modificar borrar categorias |  No | No  |  Si |
+
 
